@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+@import url("https://www.creativefabrica.com/product/sweets-smile/ref/53/");
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Fresca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@font-face {
+    font-family:"Ask" ;
+    src: url(Ascrada.ttf );
+}
+@font-face {
+    font-family: "Motherf";
+    src: url(CottonHill.ttf);
+}
+@font-face{
+    font-family: "Shiruken";
+    src:url(HIROMISAKE.ttf);
+}
+
+body {
+    background-image: -webkit-image-set(url(../imagenes/angels_and_demons_League_of_Legends.png) 1.03x);
+
+}
+.titulomesk {
+
+    color: #04f6c9;
+    font-family: "Ask";
+    height: 91px;
+    font-size: 119px;
+    margin-top: 50px;
+    margin-bottom: 48px;
+}
+.Subtitulo{
+    font-family: 'Fresca';
+    color: #400E32;
+    font-size: 23px;
+  
+}
+label{
+    text-decoration: none;
+    transition: color 1s;
+    font-size: 13px;
+    color: #20F5B8;
+    background-color:steelblue;
+    width: 187px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: color 1s;
+   
+    position: relative;
+
+}
+input {
+    display: none;
+}
+
+input:checked + label {
+    background-color: #aec6ff;
+    color:#400E32;
+}
+
+label:hover{
+    color:#400E32;
+
+    font-size: 95%;
+}
+label::before{
+    
+    content: '';
+    position:absolute;
+    background-color: #04f6c9;
+    z-index: -1;
+    width: 0;
+    transition: width 1s;
+    transform: skewX(35deg);
+    left: -50px;
+    top: 0;
+    height: 100%;
+}
+label:hover::before{
+    width:150%
+}
+
+#ataques-jugador, #ataques-enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-clip: border-box;
+    background-color: transparent;
+    width: 183px;
+    height: 54px;
+    margin: 5px;
+    padding: 17px;
+}
+#seleccionar-personaje {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjetas{
+    display: flex;
+    gap: 10px;
+    font-family: 'Righteous', cursive;
+}
+
+.tarjeta-de-mokepon {
+    width: 200px;
+    height: 138px;
+    padding: 10px;
+    margin: 7px;
+    box-sizing: border-box;
+    border: 2px solid lightsteelblue;
+    border-radius: 21px;
+    display: flex;
+    color: #C9EEFF;
+    justify-content: center;
+    align-items: center;
+  
+   
+    
+}
+
+
+.tarjeta-de-mokepon img {
+    width: 98px;
+}
+
+#boton-personaje{
+    width: 180px;
+    height: 90px;
+    border-radius: 51px;
+    border: transparent;
+    color: greenyellow;
+    font-family: 'Tilt Warp', cursive;
+    font-size: 26px;
+    margin: 36px 0px 0px 0px;
+}
+
+
+#seleccionar-ataque{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#subt_ataque{
+    font-family: "Shiruken";
+    color: #75f4ff;
+    FONT-SIZE: 35PX;
+}
+#ataques{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ataque{
+   
+    background: linear-gradient(180deg, #20F5B8 0%, #29d490 100%);
+    margin: 7px;
+    box-sizing: border-box;
+    transition: all .3s;
+    border-radius: 21px;
+    border: transparent;
+    font-family: "Motherf";
+    color: white;
+    padding: 8px;
+    font-size: 23px;
+}
+
+
+.ataque:hover {
+    background: linear-gradient(180deg, #fa4306 0%, #d9c000 100%);
+    transition: all .3s;
+    cursor: pointer;
+}
+#boton-personaje:hover {
+    cursor: pointer;
+}
+#mensajes{
+    width: 106px;
+    font-family: 'Ask', cursive;
+    color: white;
+    background: radial-gradient(#060047, transparent 184%);
+    padding: 61px;
+    margin-top: 44px;
+    border-radius: 96px;
+    font-size: 43px;
+    /* display: flex; */
+    margin-right: 0px;
+}
+#Attack-jp{
+    color: white;
+    font-family: 'Motherf';
+    font-size: 23px;
+}
+#Attack-cp{
+    color: white;
+    font-family: 'Motherf';
+    font-size: 23px;
+}
+.ataques-mamados{
+    display: grid;
+    grid-template-columns: 100px 100px;
+}
+#resultado{
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width: 720px){
+    
+    .titulomesk {
+        margin-top: 345px;
+
+    }
+
+    .tarjetas{
+      flex-direction: column;
+    }
+    #ataques{
+        flex-direction: column;
+
+    }
+    #sub_ataque{
+        display: flex;
+        justify-content: center;
+        width: 144px;
+    }
+    #boton-personaje{
+        margin: 36px 0px 10px 0px;
+        width: 221px;
+        padding: 39px;
+        display: flex;
+        margin: 36px 0px 0px 0px;
+        height: 127px;
+        justify-content: center;
+    }
+}

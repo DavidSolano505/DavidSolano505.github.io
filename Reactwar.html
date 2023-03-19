@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Reactwar</title>
+    
+    <link rel="stylesheet" href="./CSS/Reactwr_styles.css">
+  </head>
+  <body>
+
+  
+    <section id="seleccionar-personaje" class="sectionp">
+      <h1 id="titulo" class="titulomesk">REACTWAR</h1>
+    
+    
+      <h2 class="Subtitulo">Elige tu personaje: </h2>
+
+      <div class="tarjetas">
+        <input type="radio" name="personaje" id="Lu Chang"/>
+        <label id="A" class="tarjeta-de-mokepon" for="Lu Chang">
+          <p>Lu Chang "Señor de los mares" ♒</p>
+          <img src="./imagenes/luchang_p.png" alt="Lu Chang">
+        </label>
+      
+        <input type="radio" name="personaje" id="Ardrid"/>
+        <label id="B" class="tarjeta-de-mokepon" for="Ardrid">
+          <p>Ardrid "Protector del bosque"🌱</p>
+          <img src="./imagenes/ardrid_p.png" alt="Ardrid">
+        </label>
+      
+        <input type="radio" name="personaje" id="Fogos"/>    
+        <label id="C" class="tarjeta-de-mokepon" for="Fogos">
+          <p>Fogos "Asesino flamante" 🔥</p>
+          <img src="./imagenes/fogos_p.png" alt="Fogos">
+        </label>
+      
+        <input type="radio" name="personaje" id="Shock"/>
+        <label id="D" class="tarjeta-de-mokepon" for="Shock">
+         <p>Shock "La de los truenos" ⚡</p>
+         <img src="./imagenes/shock_male_p.png" alt="Shock">
+        </label>
+      
+        <input type="radio" name="personaje" id="Godman"/>
+        <label id="E"class="tarjeta-de-mokepon" for="Godman">
+          <p>Godman "El dios de las rocas"🥌</p>
+          <img src="./imagenes/godman_p.png" alt="Godman">
+        </label>
+      
+        <input type="radio" name="personaje" id="Oldswan"/>
+        <label id="F" class="tarjeta-de-mokepon" for="Oldswan">
+          <p>Oldswan "Caballero aventado" 🌪 </p>
+          <img src="./imagenes/Oldswan_p.png" alt="Oldswan">
+        </label>
+      
+    
+      </div>
+    
+     <button id="boton-personaje">Seleccionar</button>
+   </section>
+    <section id="seleccionar-ataque">
+    
+      <h2 id="subt_ataque">Elige tu ataque:</h2>
+
+
+ 
+
+      <div id="ataques">
+       <button id="Attack Pyro" class="ataque">Pyro🔥</button>
+       <button id="Attack Hydro" class="ataque">Hydro♒</button>
+       <button id="Attack Geo" class="ataque">Geo🥌</button>
+       <button id="Attack Electro" class="ataque">Electro⚡</button>
+       <button id="Attack Vegta" class="ataque">Vegta🌱</button>
+       <button id="Attack Vento" class="ataque">Vento🌪</button>  
+      </div>
+
+    
+  
+
+
+  
+    <div>
+      <div id="mensajes">
+        <p id="resultado"></p>
+      </div>
+
+      <p id="resultado"></p>
+    
+
+      <section id="reiniciar">
+        <button id="boton-Reiniciar">Reiniciar</button>
+      </section>
+    </div>
+  
+    <div class="ataques-mamados">
+      <div id="ataques-jugador">
+        <p><span id="vidas-jugador">3</span> ♥</p>
+        <p id="personaje-jugador"></p>     
+        <div id="Attack-jp"></div>
+
+      </div>
+      <div id="ataques-enemigo">
+        <p><span id="vidas-enemigo">3</span> ♥</p>
+        <p id="personaje-enemigo"></p>     
+        <div id="Attack-cp"></div>
+      
+      </div>
+    
+    
+    </div>
+
+    </section>
+    <script src="./JS(REACTWAR)/reactwar.js"></script>
+  </body>
+</html>
+<!--display: block;
+    margin: 8px;
+    background: linear-gradient(to right,#FF5F9E,#E90064,#635985 );-->
