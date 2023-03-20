@@ -43,17 +43,20 @@ label{
     font-size: 13px;
     color: #20F5B8;
     background-color:steelblue;
-    width: 187px;
-    height: 45px;
+    width: 200px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     transition: color 1s;
-   
+    
     position: relative;
 
 }
+
+    
+
 input {
     display: none;
 }
@@ -68,6 +71,10 @@ label:hover{
 
     font-size: 95%;
 }
+label:hover+.tarjeta-de-mokepon img{
+    margin-left: 0px;
+    position: absolute;
+}
 label::before{
     
     content: '';
@@ -75,7 +82,7 @@ label::before{
     background-color: #04f6c9;
     z-index: -1;
     width: 0;
-    transition: width 1s;
+    
     transform: skewX(35deg);
     left: -50px;
     top: 0;
@@ -125,6 +132,7 @@ button {
     color: #C9EEFF;
     justify-content: center;
     align-items: center;
+    
   
    
     
@@ -133,7 +141,13 @@ button {
 
 .tarjeta-de-mokepon img {
     width: 98px;
+    overflow: hidden;
+    margin-left: 9px;
+    position: relative;
+
 }
+
+
 
 #boton-personaje{
     width: 180px;

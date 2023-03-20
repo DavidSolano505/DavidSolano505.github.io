@@ -13,7 +13,6 @@ const sectionselectperson=document.getElementById('seleccionar-personaje')
 const newDiv =document.getElementById("resultado")
 const Attackjp =document.getElementById("Attack-jp")
 const Attackcp =document.getElementById("Attack-cp")
-const sectionReiniciar = document.getElementById('reiniciar')
 const spanVidajugador=document.getElementById("vidas-jugador")
 const spanVidaenemigo=document.getElementById("vidas-enemigo")
 const contenedorTarjetas = document.getElementById('contenedorTarjetas')
@@ -34,17 +33,17 @@ class Reactwar {
     }
 }
 
-let LuChang = new Reactwars('Lu Chang', './imagenes/luchang_p.png', 5)
+let LuChang = new Reactwar('LuChang', './imagenes/luchang_p.png', 5)
 
-let Ardrid = new Reactwars('Ardrid', './imagenes/ardrid_p.png', 5)
+let Ardrid = new Reactwar('Ardrid', './imagenes/ardrid_p.png', 5)
 
-let Fogos = new Reactwars('Fogos', './imagenes/fogos_p.png', 5)
+let Fogos = new Reactwar('Fogos', './imagenes/fogos_p.png', 5)
 
-let Shock = new Reactwars('Shock', './imagenes/shock_male_p.png', 5)
+let Shock = new Reactwar('Shock', './imagenes/shock_male_p.png', 5)
 
-let Godman = new Reactwars('Godman', './imagenes/godman_p.png', 5)
+let Godman = new Reactwar('Godman', './imagenes/godman_p.png', 5)
 
-let Oldswan = new Reactwars('Oldswan', './imagenes/Oldswan_p.png', 5)
+let Oldswan = new Reactwar('Oldswan', './imagenes/Oldswan_p.png', 5)
 
 
 LuChang.ataques.push(
@@ -110,8 +109,8 @@ function iniciarJuego() {
     warriors.forEach((reactwar) => {
         opcionDereactwares = `
         <input type="radio" name="mascota" id=${reactwar.nombre} />
-        <label class="tarjeta-de-reactwar" for=${reactwar.nombre}>
-            <p>${reactwar.nombre}</p>
+        <label class="tarjeta-de-mokepon" for=${reactwar.nombre}>
+            <p class="Char">${reactwar.nombre}</p>
             <img src=${reactwar.foto} alt=${reactwar.nombre}>
         </label>
         `
@@ -152,7 +151,7 @@ function seleccionarPersonajeJugador(){
 
     
     let spanPersonajej =document.getElementById("personaje-jugador")
-    if(document.getElementById("Lu Chang").checked){
+    if(document.getElementById("LuChang").checked){
         spanPersonajej.innerHTML= 'Lu Chang'
         
     }
