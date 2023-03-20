@@ -24,54 +24,80 @@ let ataqueEnemigo
 let vidaJugador =3
 let vidaEnemigo =3
 
-//class Reactwar {
-//    constructor(nombre, foto, vida) {
-//        this.nombre = nombre
-//        this.foto = foto
-//        this.vida = vida
-//        this.ataques = []
-//    }
-//}
+class Reactwar {
+    constructor(nombre, foto, vida) {
+        this.nombre = nombre
+        this.foto = foto
+        this.vida = vida
+        this.ataques = []
+    }
+}
 
-//let LuChang = new Reactwars('Lu Chang', './imagenes/luchang_p.png', 5)
+let LuChang = new Reactwars('Lu Chang', './imagenes/luchang_p.png', 5)
 
-//let Ardrid = new Reactwars('Ardrid', './imagenes/ardrid_p.png', 5)
+let Ardrid = new Reactwars('Ardrid', './imagenes/ardrid_p.png', 5)
 
-//let Fogos = new Reactwars('Fogos', './imagenes/fogos_p.png', 5)
+let Fogos = new Reactwars('Fogos', './imagenes/fogos_p.png', 5)
 
-//let Shock = new Reactwars('Shock', './imagenes/shock_male_p.png', 5)
+let Shock = new Reactwars('Shock', './imagenes/shock_male_p.png', 5)
 
-//let Godman = new Reactwars('Godman', './imagenes/godman_p.png', 5)
+let Godman = new Reactwars('Godman', './imagenes/godman_p.png', 5)
 
-//let Oldswan = new Reactwars('Oldswan', './imagenes/Oldswan_p.png', 5)
+let Oldswan = new Reactwars('Oldswan', './imagenes/Oldswan_p.png', 5)
 
 
-//hipodoge.ataques.push(
-//    { nombre: '💧', id: 'boton-agua' },
-//    { nombre: '💧', id: 'boton-agua' },
-//    { nombre: '💧', id: 'boton-agua' },
-//    { nombre: '🔥', id: 'boton-fuego' },
-//    { nombre: '🌱', id: 'boton-tierra' },
-//)
+LuChang.ataques.push(
+    { nombre: '💧', id: 'boton-agua' },
+    { nombre: '💧', id: 'boton-agua' },
+    { nombre: '💧', id: 'boton-agua' },
+    { nombre: '🔥', id: 'boton-fuego' },
+    { nombre: '🌱', id: 'boton-tierra' },
+)
 
-//capipepo.ataques.push(
-//    { nombre: '🌱', id: 'boton-tierra' },
-//    { nombre: '🌱', id: 'boton-tierra' },
-//    { nombre: '🌱', id: 'boton-tierra' },
-//    { nombre: '💧', id: 'boton-agua' },
-//    { nombre: '🔥', id: 'boton-fuego' },
+Ardrid.ataques.push(
+    { nombre: '🌱', id: 'boton-tierra' },
+    { nombre: '🌱', id: 'boton-tierra' },
+    { nombre: '🌱', id: 'boton-tierra' },
+    { nombre: '💧', id: 'boton-agua' },
+    { nombre: '🔥', id: 'boton-fuego' },
     
-//)
+)
 
-//ratigueya.ataques.push(
-//    { nombre: '🔥', id: 'boton-fuego' },
-//    { nombre: '🔥', id: 'boton-fuego' },
-//    { nombre: '🔥', id: 'boton-fuego' },
-//    { nombre: '💧', id: 'boton-agua' },
-//    { nombre: '🌱', id: 'boton-tierra' },
-//)
+Fogos.ataques.push(
+    { nombre: '🔥', id: 'boton-fuego' },
+    { nombre: '🔥', id: 'boton-fuego' },
+    { nombre: '🔥', id: 'boton-fuego' },
+    { nombre: '🥌', id: 'boton-agua' },
+    { nombre: '⚡', id: 'boton-tierra' },
+)
 
-//Reactwarses.push(hipodoge,capipepo,ratigueya)
+Shock.ataques.push(
+    { nombre: '⚡', id: 'boton-agua' },
+    { nombre: '⚡', id: 'boton-agua' },
+    { nombre: '⚡', id: 'boton-agua' },
+    { nombre: '♒', id: 'boton-fuego' },
+    { nombre: '🔥', id: 'boton-tierra' },
+)
+
+Godman.ataques.push(
+    { nombre: '🥌', id: 'boton-tierra' },
+    { nombre: '🥌', id: 'boton-tierra' },
+    { nombre: '🥌', id: 'boton-tierra' },
+    { nombre: '🌱', id: 'boton-agua' },
+    { nombre: '💧', id: 'boton-fuego' },
+    
+)
+
+Oldswan.ataques.push(
+    { nombre: '🌪', id: 'boton-fuego' },
+    { nombre: '🌪', id: 'boton-fuego' },
+    { nombre: '🌪', id: 'boton-fuego' },
+    { nombre: '🔥', id: 'boton-agua' },
+    { nombre: '🌱', id: 'boton-tierra' },
+)
+
+
+Reactwarses.push(hipodoge,capipepo,ratigueya)
 
 
 
@@ -99,12 +125,6 @@ function iniciarJuego() {
     botonPersonajeJugador.addEventListener('click',seleccionarPersonajeJugador)
     
 
-//    <button id="Attack Pyro">Pyro🔥</button>
-//    <button id="Attack Hydro">Hydro♒</button>
-//    <button id="Attack Geo">Geo🥌</button>
-//    <button id="Attack Electro">Electro⚡</button>
-//    <button id="Attack Vegta">Vegta🌱</button>
-//    <button id="Attack Vento">Vento🌪</button>  
 
     
     AttackPyro.addEventListener('click', ataquepyro)
@@ -246,7 +266,7 @@ function AtaquedelEnemigo(){
 }
 
 function crearmensaje(resultado) {
-    //let parrafo=document.createElement("p")
+    let parrafo=document.createElement("p")
    
     
     let Nuevoataquedeljugador=document.createElement("p")
@@ -257,7 +277,7 @@ function crearmensaje(resultado) {
     Nuevoataquedelenemigo.innerHTML=ataqueEnemigo
 
 
-    //parrafo.innerHTML="Tu personaje ataco con " + ataqueJugador + ", y el enemigo ataco con "+ ataqueEnemigo + " - "+resultado
+    parrafo.innerHTML="Tu personaje ataco con " + ataqueJugador + ", y el enemigo ataco con "+ ataqueEnemigo + " - "+resultado
     Attackjp.appendChild(Nuevoataquedeljugador)
     Attackcp.appendChild(Nuevoataquedelenemigo)
 
@@ -380,29 +400,29 @@ function aleatorio(min,max) {
     return Math.floor(Math.random()*(max-min+1)+min)
 }
 
-//<label for="Lu Chang">Lu Chang "Señor de los mares medios" ♒</label>
-//<input type="radio" name="personaje" id="Lu Chang"/>
-//<label for="Ardrid">Ardrid "Protector del bosque"🌱</label>
-//<input type="radio" name="personaje" id="Ardrid"/>
+/*<label for="Lu Chang">Lu Chang "Señor de los mares medios" ♒</label>
+<input type="radio" name="personaje" id="Lu Chang"/>
+<label for="Ardrid">Ardrid "Protector del bosque"🌱</label>
+<input type="radio" name="personaje" id="Ardrid"/>
 
-//<label for="Fogos">Fogos "Asesino flamante" 🔥</label>
-//<input type="radio" name="personaje" id="Fogos"/>
+<label for="Fogos">Fogos "Asesino flamante" 🔥</label>
+<input type="radio" name="personaje" id="Fogos"/>
 
-//<label for="Shock">Shock "El de los truenos" ⚡</label>
-//<input type="radio" name="personaje" id="Shock"/>
+<label for="Shock">Shock "El de los truenos" ⚡</label>
+<input type="radio" name="personaje" id="Shock"/>
 
-//<label for="Godman">Godman "El dios de las rocas"🥌</label>
-//<input type="radio" name="personaje" id="Godman"/>
+<label for="Godman">Godman "El dios de las rocas"🥌</label>
+<input type="radio" name="personaje" id="Godman"/>
 
-//<label for="Oldswan">Oldswan "Caballero aventado" 🌪 </label>
-//<input type="radio" name="personaje" id="Oldswan"/>
+<label for="Oldswan">Oldswan "Caballero aventado" 🌪 </label>
+<input type="radio" name="personaje" id="Oldswan"/>
 
-//  <p>
-//    <button id="Attack Pyro">Pyro🔥</button>
-//    <button id="Attack Hydro">Hydro♒</button>
-//    <button id="Attack Geo">Geo🥌</button>
-//    <button id="Attack Electro">Electro⚡</button>
-//    <button id="Attack Vegta">Vegta🌱</button>
-//    <button id="Attack Vento">Vento🌪</button>  
-//  </p>
-//Write a code how it is a Facebook
+  <p>
+    <button id="Attack Pyro">Pyro🔥</button>
+    <button id="Attack Hydro">Hydro♒</button>
+    <button id="Attack Geo">Geo🥌</button>
+    <button id="Attack Electro">Electro⚡</button>
+    <button id="Attack Vegta">Vegta🌱</button>
+    <button id="Attack Vento">Vento🌪</button>  
+  </p>
+Write a code how it is a Facebook*/
