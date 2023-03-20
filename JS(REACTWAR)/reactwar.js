@@ -16,9 +16,10 @@ const Attackcp =document.getElementById("Attack-cp")
 const sectionReiniciar = document.getElementById('reiniciar')
 const spanVidajugador=document.getElementById("vidas-jugador")
 const spanVidaenemigo=document.getElementById("vidas-enemigo")
+const contenedorTarjetas = document.getElementById('contenedorTarjetas')
 
 
-
+let warriors = []
 let ataqueJugador
 let ataqueEnemigo
 let vidaJugador =3
@@ -97,7 +98,7 @@ Oldswan.ataques.push(
 )
 
 
-Reactwarses.push(hipodoge,capipepo,ratigueya)
+warriors.push(LuChang, Ardrid, Fogos, Shock, Godman, Oldswan)
 
 
 
@@ -106,18 +107,18 @@ function iniciarJuego() {
     
     sectionselectatack.style.display='none'
     
-    /* mokepones.forEach((mokepon) => {
-        opcionDeMokepones = `
-        <input type="radio" name="mascota" id=${mokepon.nombre} />
-        <label class="tarjeta-de-mokepon" for=${mokepon.nombre}>
-            <p>${mokepon.nombre}</p>
-            <img src=${mokepon.foto} alt=${mokepon.nombre}>
+    warriors.forEach((reactwar) => {
+        opcionDereactwares = `
+        <input type="radio" name="mascota" id=${reactwar.nombre} />
+        <label class="tarjeta-de-reactwar" for=${reactwar.nombre}>
+            <p>${reactwar.nombre}</p>
+            <img src=${reactwar.foto} alt=${reactwar.nombre}>
         </label>
         `
-    contenedorTarjetas.innerHTML += opcionDeMokepones
+    contenedorTarjetas.innerHTML += opcionDereactwares
 
     })
-    */
+    
    
 
     
