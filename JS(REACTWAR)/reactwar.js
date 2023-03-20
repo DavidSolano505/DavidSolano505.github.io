@@ -1,23 +1,101 @@
+const sectionselectatack=document.getElementById('seleccionar-ataque')
+const sectionReiniciar = document.getElementById('reiniciar')
+sectionReiniciar.style.display = 'none'
+const botonPersonajeJugador=document.getElementById("boton-personaje")
+const AttackPyro=document.getElementById("Attack Pyro")
+const AttackHydro=document.getElementById("Attack Hydro")
+const AttackGeo=document.getElementById("Attack Geo")
+const AttackElectro=document.getElementById("Attack Electro")
+const AttackVegta=document.getElementById("Attack Vegta")
+const AttackVento=document.getElementById("Attack Vento")
+const botonreiniciar= document.getElementById("boton-Reiniciar")
+const sectionselectperson=document.getElementById('seleccionar-personaje')
+const newDiv =document.getElementById("resultado")
+const Attackjp =document.getElementById("Attack-jp")
+const Attackcp =document.getElementById("Attack-cp")
+const sectionReiniciar = document.getElementById('reiniciar')
+const spanVidajugador=document.getElementById("vidas-jugador")
+const spanVidaenemigo=document.getElementById("vidas-enemigo")
+
+
+
 let ataqueJugador
 let ataqueEnemigo
 let vidaJugador =3
 let vidaEnemigo =3
 
-function aleatorio(min,max) {
-    return Math.floor(Math.random()*(max-min+1)+min)
-}
+//class Reactwar {
+//    constructor(nombre, foto, vida) {
+//        this.nombre = nombre
+//        this.foto = foto
+//        this.vida = vida
+//        this.ataques = []
+//    }
+//}
+
+//let LuChang = new Reactwars('Lu Chang', './imagenes/luchang_p.png', 5)
+
+//let Ardrid = new Reactwars('Ardrid', './imagenes/ardrid_p.png', 5)
+
+//let Fogos = new Reactwars('Fogos', './imagenes/fogos_p.png', 5)
+
+//let Shock = new Reactwars('Shock', './imagenes/shock_male_p.png', 5)
+
+//let Godman = new Reactwars('Godman', './imagenes/godman_p.png', 5)
+
+//let Oldswan = new Reactwars('Oldswan', './imagenes/Oldswan_p.png', 5)
+
+
+//hipodoge.ataques.push(
+//    { nombre: '💧', id: 'boton-agua' },
+//    { nombre: '💧', id: 'boton-agua' },
+//    { nombre: '💧', id: 'boton-agua' },
+//    { nombre: '🔥', id: 'boton-fuego' },
+//    { nombre: '🌱', id: 'boton-tierra' },
+//)
+
+//capipepo.ataques.push(
+//    { nombre: '🌱', id: 'boton-tierra' },
+//    { nombre: '🌱', id: 'boton-tierra' },
+//    { nombre: '🌱', id: 'boton-tierra' },
+//    { nombre: '💧', id: 'boton-agua' },
+//    { nombre: '🔥', id: 'boton-fuego' },
+    
+//)
+
+//ratigueya.ataques.push(
+//    { nombre: '🔥', id: 'boton-fuego' },
+//    { nombre: '🔥', id: 'boton-fuego' },
+//    { nombre: '🔥', id: 'boton-fuego' },
+//    { nombre: '💧', id: 'boton-agua' },
+//    { nombre: '🌱', id: 'boton-tierra' },
+//)
+
+//Reactwarses.push(hipodoge,capipepo,ratigueya)
+
 
 
 
 function iniciarJuego() {
-    let sectionselectatack=document.getElementById('seleccionar-ataque')
+    
     sectionselectatack.style.display='none'
-    let sectionReiniciar = document.getElementById('reiniciar')
-    sectionReiniciar.style.display = 'none'
+    
+    /* mokepones.forEach((mokepon) => {
+        opcionDeMokepones = `
+        <input type="radio" name="mascota" id=${mokepon.nombre} />
+        <label class="tarjeta-de-mokepon" for=${mokepon.nombre}>
+            <p>${mokepon.nombre}</p>
+            <img src=${mokepon.foto} alt=${mokepon.nombre}>
+        </label>
+        `
+    contenedorTarjetas.innerHTML += opcionDeMokepones
+
+    })
+    */
    
 
     
-    let botonPersonajeJugador=document.getElementById("boton-personaje")
+    
     botonPersonajeJugador.addEventListener('click',seleccionarPersonajeJugador)
     
 
@@ -28,27 +106,27 @@ function iniciarJuego() {
 //    <button id="Attack Vegta">Vegta🌱</button>
 //    <button id="Attack Vento">Vento🌪</button>  
 
-    let AttackPyro=document.getElementById("Attack Pyro")
+    
     AttackPyro.addEventListener('click', ataquepyro)
-    let AttackHydro=document.getElementById("Attack Hydro")
+    
     AttackHydro.addEventListener('click', ataquehydro)
-    let AttackGeo=document.getElementById("Attack Geo")
+    
     AttackGeo.addEventListener('click', ataquegeo)
-    let AttackElectro=document.getElementById("Attack Electro")
+    
     AttackElectro.addEventListener('click', ataqueelectro)
-    let AttackVegta=document.getElementById("Attack Vegta")
+    
     AttackVegta.addEventListener('click', ataquevegta)
-    let AttackVento=document.getElementById("Attack Vento")
+    
     AttackVento.addEventListener('click', ataquevento)
     
-    let botonreiniciar= document.getElementById("boton-Reiniciar")
+    
     botonreiniciar.addEventListener('click', reiniciarjuego)
 }
 function seleccionarPersonajeJugador(){
     
-    let sectionselectatack=document.getElementById('seleccionar-ataque')
+    
     sectionselectatack.style.display= 'flex'
-    let sectionselectperson=document.getElementById('seleccionar-personaje')
+    
     sectionselectperson.style.display='none'
 
     
@@ -96,7 +174,7 @@ function seleccionarPersonajeJugador(){
 
 function seleccionarPersonajeEnemigo(){
     let ataqueAleatorio= aleatorio(1,6)
-    let spanPersonajeen=document.getElementById("personaje-enemigo")
+    
     if(ataqueAleatorio==1){
         spanPersonajeen.innerHTML="Lu Chang"
     } else if (ataqueAleatorio==2){
@@ -169,9 +247,7 @@ function AtaquedelEnemigo(){
 
 function crearmensaje(resultado) {
     //let parrafo=document.createElement("p")
-    let newDiv =document.getElementById("resultado")
-    let Attackjp =document.getElementById("Attack-jp")
-    let Attackcp =document.getElementById("Attack-cp")
+   
     
     let Nuevoataquedeljugador=document.createElement("p")
     let Nuevoataquedelenemigo=document.createElement("p")
@@ -190,30 +266,29 @@ function crearmensaje(resultado) {
 
 function crearmensajeFinal(just) {
     
-    let newDiv =document.getElementById("resultado")           
+             
     newDiv.innerHTML=just
     
-    let AttackPyro=document.getElementById("Attack Pyro")
+    
     AttackPyro.disabled=true
-    let AttackHydro=document.getElementById("Attack Hydro")
+    
     AttackHydro.disabled=true
-    let AttackGeo=document.getElementById("Attack Geo")
+    
     AttackGeo.disabled=true
-    let AttackElectro=document.getElementById("Attack Electro")
+    
     AttackElectro.disabled=true
-    let AttackVegta=document.getElementById("Attack Vegta")
+    
     AttackVegta.disabled=true
-    let AttackVento=document.getElementById("Attack Vento")
+    
     AttackVento.disabled=true
     
-    let sectionReiniciar = document.getElementById('reiniciar')
+    
     sectionReiniciar.style.display = 'block'
             
 }
 
 function combate() {
-    let spanVidajugador=document.getElementById("vidas-jugador")
-    let spanVidaenemigo=document.getElementById("vidas-enemigo")
+    
     if(ataqueEnemigo == ataqueJugador) {
         crearmensaje("EMPATE")
     } else if(ataqueJugador == 'PYRO' && ataqueEnemigo == 'GEO') {
@@ -301,6 +376,9 @@ function reiniciarjuego(){
 }
 window.addEventListener('load', iniciarJuego)
 
+function aleatorio(min,max) {
+    return Math.floor(Math.random()*(max-min+1)+min)
+}
 
 //<label for="Lu Chang">Lu Chang "Señor de los mares medios" ♒</label>
 //<input type="radio" name="personaje" id="Lu Chang"/>
