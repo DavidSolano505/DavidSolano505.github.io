@@ -21,6 +21,14 @@ const contenedorTarjetas = document.getElementById('contenedorTarjetas')
 let warriors = []
 let ataqueJugador
 let ataqueEnemigo
+let opcionDereactwares
+let input_LuChang = document.getElementById('LuChang')     
+let inputArdrid = document.getElementById('Ardrid')
+let inputFogos = document.getElementById('Fogos')
+let inputShock = document.getElementById('Shock')
+let inputGodman= document.getElementById('Godman')
+let inputOldswan= document.getElementById('Oldswan')
+
 let vidaJugador =3
 let vidaEnemigo =3
 
@@ -116,6 +124,72 @@ function iniciarJuego() {
         `
     contenedorTarjetas.innerHTML += opcionDereactwares
 
+     input_LuChang = document.getElementById('LuChang')
+
+     inputArdrid = document.getElementById('Ardrid')
+
+     inputFogos = document.getElementById('Fogos')
+
+     inputShock = document.getElementById('Shock')
+
+     inputGodman= document.getElementById('Godman')
+
+     inputOldswan= document.getElementById('Oldswan')
+     inputLuChang = document.getElementById('LuChang')
+
+     inputArdrid = document.getElementById('Ardrid')
+
+     inputFogos = document.getElementById('Fogos')
+
+     inputShock = document.getElementById('Shock')
+
+     inputGodman= document.getElementById('Godman')
+
+     inputOldswan= document.getElementById('Oldswan')
+     inputLuChang = document.getElementById('LuChang')
+
+     inputArdrid = document.getElementById('Ardrid')
+
+     inputFogos = document.getElementById('Fogos')
+
+     inputShock = document.getElementById('Shock')
+
+     inputGodman= document.getElementById('Godman')
+
+     inputOldswan= document.getElementById('Oldswan')
+     inputLuChang = document.getElementById('LuChang')
+
+     inputArdrid = document.getElementById('Ardrid')
+
+     inputFogos = document.getElementById('Fogos')
+
+     inputShock = document.getElementById('Shock')
+
+     inputGodman= document.getElementById('Godman')
+
+     inputOldswan= document.getElementById('Oldswan')
+     inputLuChang = document.getElementById('LuChang')
+
+     inputArdrid = document.getElementById('Ardrid')
+
+     inputFogos = document.getElementById('Fogos')
+
+     inputShock = document.getElementById('Shock')
+
+     inputGodman= document.getElementById('Godman')
+
+     inputOldswan= document.getElementById('Oldswan')
+     inputLuChang = document.getElementById('LuChang')
+
+     inputArdrid = document.getElementById('Ardrid')
+
+     inputFogos = document.getElementById('Fogos')
+
+     inputShock = document.getElementById('Shock')
+
+     inputGodman= document.getElementById('Godman')
+
+     inputOldswan= document.getElementById('Oldswan')
     })
     
    
