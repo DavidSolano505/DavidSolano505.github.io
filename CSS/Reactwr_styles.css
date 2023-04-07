@@ -26,10 +26,11 @@ body {
 
     color: #04f6c9;
     font-family: "Ask";
-    height: 91px;
-    font-size: 119px;
-    margin-top: 50px;
-    margin-bottom: 48px;
+    height: 68px;
+    font-size: 121px;
+    margin-top: 68px;
+    margin-bottom: 51px;
+    
 }
 .Subtitulo{
     font-family: 'Fresca';
@@ -237,7 +238,7 @@ button {
 @media (max-width: 720px){
     
     .titulomesk {
-        margin-top: 345px;
+        padding-top: 438px;
 
     }
 

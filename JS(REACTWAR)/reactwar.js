@@ -16,7 +16,8 @@ const Attackcp =document.getElementById("Attack-cp")
 const spanVidajugador=document.getElementById("vidas-jugador")
 const spanVidaenemigo=document.getElementById("vidas-enemigo")
 const contenedorTarjetas = document.getElementById('contenedorTarjetas')
-
+const spanPersonajej =document.getElementById("personaje-jugador")
+const spanPersonajeen =document.getElementById("personaje-enemigo")
 
 let warriors = []
 let ataqueJugador
@@ -28,6 +29,7 @@ let inputFogos
 let inputShock 
 let inputGodman
 let inputOldswan
+
 
 let vidaJugador =3
 let vidaEnemigo =3
@@ -170,29 +172,29 @@ function seleccionarPersonajeJugador(){
     sectionselectperson.style.display='none'
 
     
-    let spanPersonajej =document.getElementById("personaje-jugador")
-    if(document.getElementById("LuChang").checked){
-        spanPersonajej.innerHTML= 'Lu Chang'
+    
+    if(input_LuChang.checked){
+        spanPersonajej.innerHTML= input_LuChang.id
         
     }
-    else if(document.getElementById("Ardrid").checked){
-        spanPersonajej.innerHTML= 'Ardrid'
+    else if(inputArdrid.checked){
+        spanPersonajej.innerHTML= inputArdrid.id
       
     }
-    else if(document.getElementById("Fogos").checked){
-        spanPersonajej.innerHTML= 'Fogos'
+    else if(inputFogos.checked){
+        spanPersonajej.innerHTML= inputFogos.id
        
     }
-    else if(document.getElementById("Shock").checked){
-        spanPersonajej.innerHTML= 'Shock'
+    else if(inputShock.checked){
+        spanPersonajej.innerHTML= inputShock.id
         
     }
-    else if(document.getElementById("Godman").checked){
-        spanPersonajej.innerHTML= 'Godman'
+    else if(inputGodman.checked){
+        spanPersonajej.innerHTML= inputGodman.id
         
     }
-    else if(document.getElementById("Oldswan").checked){
-        spanPersonajej.innerHTML= 'Oldswan'
+    else if(inputOldswan.checked){
+        spanPersonajej.innerHTML= inputOldswan.id
        
     
     }
