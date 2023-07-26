@@ -2,12 +2,12 @@ const sectionselectatack=document.getElementById('seleccionar-ataque')
 const sectionReiniciar = document.getElementById('reiniciar')
 sectionReiniciar.style.display = 'none'
 const botonPersonajeJugador=document.getElementById("boton-personaje")
-const AttackPyro=document.getElementById("Attack Pyro")
-const AttackHydro=document.getElementById("Attack Hydro")
-const AttackGeo=document.getElementById("Attack Geo")
-const AttackElectro=document.getElementById("Attack Electro")
-const AttackVegta=document.getElementById("Attack Vegta")
-const AttackVento=document.getElementById("Attack Vento")
+const AttackPyro=document.getElementById("AttackPyro")
+const AttackHydro=document.getElementById("AttackHydro")
+const AttackGeo=document.getElementById("AttackGeo")
+const AttackElectro=document.getElementById("AttackElectro")
+const AttackVegta=document.getElementById("AttackVegta")
+const AttackVento=document.getElementById("AttackVento")
 const botonreiniciar= document.getElementById("boton-Reiniciar")
 const sectionselectperson=document.getElementById('seleccionar-personaje')
 const newDiv =document.getElementById("resultado")
@@ -18,6 +18,8 @@ const spanVidaenemigo=document.getElementById("vidas-enemigo")
 const contenedorTarjetas = document.getElementById('contenedorTarjetas')
 const spanPersonajej =document.getElementById("personaje-jugador")
 const spanPersonajeen =document.getElementById("personaje-enemigo")
+const ContenedorAtaques=document.getElementById("ContenedorAtaques")
+
 
 let warriors = []
 let ataqueJugador
@@ -29,8 +31,7 @@ let inputFogos
 let inputShock 
 let inputGodman
 let inputOldswan
-
-
+let personaje_jp
 let vidaJugador =3
 let vidaEnemigo =3
 
@@ -126,7 +127,7 @@ function iniciarJuego() {
         `
     contenedorTarjetas.innerHTML += opcionDereactwares
 
-     inputLuChang = document.getElementById('LuChang')
+     input_LuChang = document.getElementById('LuChang')
 
      inputArdrid = document.getElementById('Ardrid')
 
@@ -175,61 +176,67 @@ function seleccionarPersonajeJugador(){
     
     if(input_LuChang.checked){
         spanPersonajej.innerHTML= input_LuChang.id
-        
+        personaje_jp= input_LuChang.id
     }
     else if(inputArdrid.checked){
         spanPersonajej.innerHTML= inputArdrid.id
-      
+        personaje_jp= inputArdrid.id
     }
     else if(inputFogos.checked){
         spanPersonajej.innerHTML= inputFogos.id
-       
+        personaje_jp= inputFogos.id
     }
     else if(inputShock.checked){
         spanPersonajej.innerHTML= inputShock.id
-        
+        personaje_jp= inputShock.id
     }
     else if(inputGodman.checked){
         spanPersonajej.innerHTML= inputGodman.id
-        
+        personaje_jp= inputGodman.id
     }
     else if(inputOldswan.checked){
         spanPersonajej.innerHTML= inputOldswan.id
-       
+        personaje_jp= inputOldswan.id
     
     }
     else{
         alert("No seleccionaste ningun personaje")
         location.reload()
     }
-
-    
-    
    
-    
+   
     seleccionarPersonajeEnemigo()
     
 
 }
+function extraerAtaques(mascotaJugador){
+    let Ataques
+    for(let i=0;i<mokepones.length;i++){
+        if(mascotaJugador===mokepones[i].nombre){ataques=mokepones[i].ataques}
+    }
+    
+    mostrarAtaques(Ataques)
+}
 
+function mostrarAtaques(ataques){
+    ataques.forEach((ataque)=>{ataquesMokepon=`
+            <button id=${ataque.id} class="ataque">${ataque.nombre}</button>
+            `
+    ContenedorAtaques.innerHTML+=ataquesMokepon})
+    botonFuego=document.getElementById('boton-fuego')
+    botonAgua=document.getElementById('boton-agua')
+    botonTierra=document.getElementById('boton-tierra')
+    botonFuego.addEventListener('click',ataqueFuego)
+    botonAgua.addEventListener('click',ataqueAgua)
+    botonTierra.addEventListener('click',ataqueTierra)
+}
 
 
 function seleccionarPersonajeEnemigo(){
-    let ataqueAleatorio= aleatorio(1,6)
+    let ataqueAleatorio= aleatorio(0,warriors.length-1)
     
-    if(ataqueAleatorio==1){
-        spanPersonajeen.innerHTML="Lu Chang"
-    } else if (ataqueAleatorio==2){
-        spanPersonajeen.innerHTML="Ardrid"
-    } else if (ataqueAleatorio==3){
-        spanPersonajeen.innerHTML="Fogos"
-    } else if (ataqueAleatorio==4){
-        spanPersonajeen.innerHTML="Shock"
-    } else if (ataqueAleatorio==5){
-        spanPersonajeen.innerHTML="Godman"
-    } else {
-        spanPersonajeen.innerHTML="Oldswan"
-    }
+    spanPersonajeen.innerHTML = warriors[ataqueAleatorio].nombre
+
 }
 
 function ataquepyro() {
